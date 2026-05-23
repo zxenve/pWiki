@@ -1,0 +1,110 @@
+[
+    {
+        "cardName": "PotatoKing1",
+        "description": "Acquire all 7 Potato Kings to win!"
+    },
+    {
+        "cardName": "PotatoKing2",
+        "description": "Acquire all 7 Potato Kings to win!"
+    },
+    {
+        "cardName": "PotatoKing3",
+        "description": "Acquire all 7 Potato Kings to win!"
+    },
+    {
+        "cardName": "PotatoKing4",
+        "description": "Acquire all 7 Potato Kings to win!"
+    },
+    {
+        "cardName": "PotatoKing5",
+        "description": "Acquire all 7 Potato Kings to win!"
+    },
+    {
+        "cardName": "PotatoKing6",
+        "description": "Acquire all 7 Potato Kings to win!"
+    },
+    {
+        "cardName": "PotatoKing7",
+        "description": "Acquire all 7 Potato Kings to win!"
+    },
+    {
+        "cardName": "Roast",
+        "description": "Roast 1 Potato"
+    },
+    {
+        "cardName": "Mash",
+        "description": "Mash 2 Potato"
+    },
+    {
+        "cardName": "Fry",
+        "description": "Fry 3 Potato"
+    },
+    {
+        "cardName": "While > 6",
+        "description": "While target ship has more than 6 potatoes"
+    },
+    {
+        "cardName": "While > 5",
+        "description": "While target ship has more than 5 potatoes"
+    },
+    {
+        "cardName": "While > 4",
+        "description": "While target ship has more than 4 potatoes"
+    },
+    {
+        "cardName": "For x times",
+        "description": "x = number of cards in enemy's hand"
+    },
+    {
+        "cardName": "For y times",
+        "description": "y = number of ship that you have"
+    },
+    {
+        "cardName": "For 2 times",
+        "description": "For 2 times"
+    },
+    {
+        "cardName": "For 3 times",
+        "description": "For 3 times"
+    },
+    {
+        "cardName": "If <=5 Else",
+        "description": "If <=5  Else"
+    },
+    {
+        "cardName": "If <=54 Else",
+        "description": "If <=4  Else"
+    },
+    {
+        "cardName": "If <=3 Else",
+        "description": "If <=3  Else"
+    },
+    {
+        "cardName": "Hack",
+        "description": "Send any ship to Battle and you decide the target"
+    },
+    {
+        "cardName": "Switch",
+        "description": "Your prize is decided by how many ships you own"
+    },
+    {
+        "cardName": "Deny",
+        "description": "Block all attacks and surprises"
+    },
+    {
+        "cardName": "Hijack",
+        "description": "Steal an enemy ship and the cards on it"
+    },
+    {
+        "cardName": "Loot",
+        "description": "Steal 2 cards from an enemy's hand"
+    },
+    {
+        "cardName": "The Frying Dutchpan",
+        "description": ""
+    },
+    {
+        "cardName": "The S.S Megachip",
+        "description": ""
+    }
+]

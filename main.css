@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    font-family: 'Kufam', sans-serif;
+
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #4d96e6;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Kufam', sans-serif;
+
+}
+
+#ocean {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: visible;
+}
+
+#ships {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    visibility: visible;
+}
+
+.ship {
+    position: absolute;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 10;
+}
+
+#ship1 {
+    height: 15%;
+    top: 10%;
+    left: 75%;
+    background-image: url("assets/imgs/Ship 1.png");
+}
+
+#ship2 {
+    height: 25%;
+    top: 20%;
+    left: 10%;
+    transform: rotateY(180deg);
+    background-image: url("assets/imgs/Ship 2.png");
+}
+
+#ship3 {
+    height: 50%;
+    top: 46%;
+    left: 75%;
+    background-image: url("assets/imgs/Ship 3.png");
+}
+
+#ship4 {
+    height: 70%;
+    top: 40%;
+    left: 2%;
+    transform: rotateY(180deg);
+    background-image: url("assets/imgs/Ship 4.png");
+}
+
+.waveLayer {
+    position: absolute;
+    width: 300%;
+    height: 30%;
+    background-size: auto 100%;
+    left: -100%;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+#wave1 {
+    top: 5%;
+    background-image: url("/assets/imgs/Wave1.png");
+    z-index: 1;
+}
+
+#wave2 {
+    top: 25%;
+    background-image: url("/assets/imgs/Wave2.png");
+    z-index: 2;
+}
+
+#wave3 {
+    top: 45%;
+    background-image: url("/assets/imgs/Wave1.png");
+    z-index: 3;
+}
+
+#wave4 {
+    top: 65%;
+    background-image: url("/assets/imgs/Wave2.png");
+    z-index: 4;
+}
+
+#wave5 {
+    top: 85%;
+    background-image: url("/assets/imgs/Wave1.png");
+    z-index: 5;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: min(2000px, 90%);
+    padding: 10px 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+    z-index: 100;
+}
+
+/* logo */
+.nav-logo img {
+    display: block;
+    border-radius: 8px;
+}
+
+/* links container */
+.nav-item {
+    display: flex;
+    gap: 25px;
+}
+
+/* links */
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+    transition: 0.2s ease;
+}
+
+/* hover effect underline */
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0%;
+    height: 2px;
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-item a:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   WOOD SECTION
+========================= */
+#wood {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("/assets/imgs/Wood.png");
+    background-repeat: repeat;
+    background-size: auto;
+
+    padding: 8% 3%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* =========================
+   CARD CONTAINERS
+========================= */
+.cardContainer {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2.5%;
+
+    border-radius: 2rem;
+}
+
+/* titles */
+.cardContainer h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+/* =========================
+   CARD ROWS
+========================= */
+.cardRow {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 2%;
+
+    margin-bottom: 2%;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+    width: 15%;
+    min-width: 120px;
+
+    aspect-ratio: 2 / 3;
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* image */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* hover */
+.card:hover {
+    transform: translateY(-6%) scale(1.05);
+
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+}
+
+#hero {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 50;
+
+    width: min(900px, 90%);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* title */
+#hero h1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* paragraphs */
+#hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+
+    max-width: 800px;
+}
+
+/* links */
+#hero a {
+    color: white;
+    font-weight: 700;
+}
+
+/* iframe container */
+#hero iframe {
+    border-radius: 1rem;
+    overflow: hidden;
+}
