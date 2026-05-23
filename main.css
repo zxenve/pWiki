@@ -86,31 +86,31 @@ body {
 
 #wave1 {
     top: 5%;
-    background-image: url("/assets/imgs/Wave1.png");
+    background-image: url("assets/imgs/Wave1.png");
     z-index: 1;
 }
 
 #wave2 {
     top: 25%;
-    background-image: url("/assets/imgs/Wave2.png");
+    background-image: url("assets/imgs/Wave2.png");
     z-index: 2;
 }
 
 #wave3 {
     top: 45%;
-    background-image: url("/assets/imgs/Wave1.png");
+    background-image: url("assets/imgs/Wave1.png");
     z-index: 3;
 }
 
 #wave4 {
     top: 65%;
-    background-image: url("/assets/imgs/Wave2.png");
+    background-image: url("assets/imgs/Wave2.png");
     z-index: 4;
 }
 
 #wave5 {
     top: 85%;
-    background-image: url("/assets/imgs/Wave1.png");
+    background-image: url("assets/imgs/Wave1.png");
     z-index: 5;
 }
 
