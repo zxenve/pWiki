@@ -342,3 +342,155 @@ body {
     border-radius: 1rem;
     overflow: hidden;
 }
+
+/*Overlay*/
+body.overlay-open {
+    overflow: hidden;
+}
+
+.card-overlay-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-overlay-bg.show {
+    display: grid;
+}
+
+.overlay {
+    width: 90%;
+    max-width: 980px;
+    min-height: 430px;
+    background: #acd3f4;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 60px;
+    color: black;
+}
+
+.card-img {
+    width: 215px;
+    border-radius: 15px;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h2 {
+    margin: 0 0 25px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.code-box {
+    width: 100%;
+    background: #459c84;
+}
+
+.tabs {
+    display: flex;
+}
+
+.lang-tab.active {
+    background: #53c2a1;
+}
+
+.lang-tab {
+    flex: 1;
+    border: none;
+    background: #2f765f;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.tabs div {
+    display: flex;
+    align-items: center;
+}
+
+.tabs div:first-child {
+    background: #53c2a1;
+}
+
+.code {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.code-content {
+    margin: 0;
+    padding: 20px;
+    min-height: 150px;
+    white-space: pre-wrap;
+    font-size: 18px;
+    font-family: Consolas, monospace;
+    background: #459c84;
+    color: white;
+}
+
+.code p {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+
+    background: #8B5A2B;
+    color: white;
+    font-family: 'Kufam', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    z-index: 9999;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+#scrollTopBtn:hover {
+    transform: translateY(-3px);
+}
+
+#scrollTopBtn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}

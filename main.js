@@ -188,3 +188,172 @@ export function animateRightShips() {
 }
 
 animateRightShips();
+
+const wood = document.getElementById("wood");
+
+const categories = {
+    "Action Cards": ["Roast", "Mash", "Fry"],
+    "Control Cards": [
+        "For 2 times", "For 3 times", "For x times", "For y times",
+        "If <=3 Else", "If <=4 Else", "If <=5 Else",
+        "While > 4", "While > 5", "While > 6"
+    ],
+    "Surprise Cards": ["Deny", "Loot", "Hack", "Hijack"],
+    "Potato King Cards": [
+        "PotatoKing1", "PotatoKing2", "PotatoKing3", "PotatoKing4",
+        "PotatoKing5", "PotatoKing6", "PotatoKing7"
+    ],
+    "Ship Cards": [
+        "The Frying Dutchpan",
+        "The S.S Megachip"
+    ]
+};
+
+fetch("cards.json")
+    .then(res => res.json())
+    .then(cards => {
+
+        for (const categoryName in categories) {
+
+            const container = document.createElement("div");
+            container.className = "cardContainer";
+
+            const title = document.createElement("h2");
+            title.textContent = categoryName;
+            container.appendChild(title);
+
+            const row = document.createElement("span");
+            row.className = "cardRow";
+
+            categories[categoryName].forEach(cardName => {
+
+                const cardData = cards.find(
+                    card => card.cardName === cardName
+                );
+
+                if (!cardData) {
+                    console.warn("Card not found:", cardName);
+                    return;
+                }
+
+                const card = document.createElement("div");
+                card.className = "card";
+
+                const img = document.createElement("img");
+
+                // Use JSON image path directly
+                img.src = cardData.imgsrc;
+                img.alt = cardData.cardName;
+
+                card.addEventListener("click", () => {
+                    openCardOverlay(cardData);
+                });
+
+                card.appendChild(img);
+
+                row.appendChild(card);
+            });
+
+            container.appendChild(row);
+            wood.appendChild(container);
+        }
+    })
+    .catch(err => console.error("Failed to load cards.json", err));
+
+
+const overlayBg = document.getElementById("cardOverlayBg");
+const closeOverlay = document.getElementById("closeOverlay");
+
+const overlayCardImg = document.getElementById("overlayCardImg");
+const overlayCardName = document.getElementById("overlayCardName");
+const overlayDescription = document.getElementById("overlayDescription");
+const overlayJS = document.getElementById("overlayJS");
+const overlayCSharp = document.getElementById("overlayCSharp");
+const overlayPython = document.getElementById("overlayPython");
+const overlayCode = document.getElementById("overlayCode");
+
+let currentCardData = null;
+
+function showLanguage(lang) {
+
+    if (!currentCardData) return;
+
+    switch (lang) {
+        case "js":
+            overlayCode.textContent =
+                currentCardData.javaScript || "No JavaScript example.";
+            break;
+
+        case "csharp":
+            overlayCode.textContent =
+                currentCardData.csharp || "No C# example.";
+            break;
+
+        case "python":
+            overlayCode.textContent =
+                currentCardData.python || "No Python example.";
+            break;
+    }
+
+    document.querySelectorAll(".lang-tab").forEach(tab => {
+        tab.classList.remove("active");
+    });
+
+    document
+        .querySelector(`[data-lang="${lang}"]`)
+        .classList.add("active");
+}
+
+function openCardOverlay(cardData) {
+
+    currentCardData = cardData;
+
+    overlayCardImg.src = cardData.imgsrc;
+    overlayCardName.textContent =
+        "Card Name: " + cardData.cardName;
+
+    overlayDescription.textContent =
+        "Explanation: " +
+        (cardData.description || "No description.");
+
+    showLanguage("js");
+
+    overlayBg.classList.add("show");
+
+    document.body.classList.add("overlay-open");
+}
+document.querySelectorAll(".lang-tab").forEach(tab => {
+
+    tab.addEventListener("click", () => {
+        showLanguage(tab.dataset.lang);
+    });
+
+});
+
+closeOverlay.addEventListener("click", () => {
+
+    overlayBg.classList.remove("show");
+
+    document.body.classList.remove("overlay-open");
+
+});
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Scroll to top when clicked
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+// Hide button when already at top
+window.addEventListener("scroll", () => {
+    if (window.scrollY < 200) {
+        scrollTopBtn.classList.add("hidden");
+    } else {
+        scrollTopBtn.classList.remove("hidden");
+    }
+});
+
