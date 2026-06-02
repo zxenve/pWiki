@@ -49,10 +49,8 @@ View code examples for each card in:
 
    link:  https://zxenve.github.io/pWiki/
 
-   ```
-
-
 ---
+
 
 ## 📁 Project Structure
 
