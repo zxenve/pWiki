@@ -85,7 +85,7 @@
     {
         "cardName": "For x times",
         "description": "x = number of cards in enemy hand",
-        "imgsrc": "assets/cards/For_x_Times.png",
+        "imgsrc": "assets/cards/For_x_times.png",
         "javaScript": "for (let i = 0; i < enemyHand.length; i++) { /* action */ }",
         "python": "for i in range(len(enemyHand)):\n    pass",
         "csharp": "for (int i = 0; i < enemyHand.Count; i++) { }"
@@ -93,7 +93,7 @@
     {
         "cardName": "For y times",
         "description": "y = number of ships you own",
-        "imgsrc": "assets/cards/For_y_Times.png",
+        "imgsrc": "assets/cards/For_y_times.png",
         "javaScript": "for (let i = 0; i < yourShips.length; i++) { /* action */ }",
         "python": "for i in range(len(yourShips)):\n    pass",
         "csharp": "for (int i = 0; i < yourShips.Count; i++) { }"
