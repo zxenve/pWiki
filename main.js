@@ -357,3 +357,122 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const quizContainer = document.getElementById("quizContainer");
+
+let quizQuestions = [];
+let quizCards = [];
+let currentQuestion = 0;
+
+Promise.all([
+    fetch("quiz.json").then(res => res.json()),
+    fetch("cards.json").then(res => res.json())
+])
+    .then(([questions, cards]) => {
+        quizQuestions = questions;
+        quizCards = cards;
+        showQuestion();
+    })
+    .catch(err => console.error("Failed to load quiz/cards json", err));
+
+function showQuestion() {
+    const q = quizQuestions[currentQuestion];
+
+    quizContainer.innerHTML = "";
+
+    const quizBox = document.createElement("div");
+    quizBox.className = "quiz-box";
+
+    quizBox.innerHTML = `
+    <div class="quiz-header">
+        <div class="quiz-number">Q${currentQuestion + 1}</div>
+        <h3>${q.question}</h3>
+    </div>
+
+    <div class="quiz-card-row"></div>
+
+    <div class="quiz-options"></div>
+
+    <p class="quiz-result"></p>
+
+    <button id="nextQuizBtn" disabled>Next</button>
+`;
+
+    const cardRow = quizBox.querySelector(".quiz-card-row");
+    const optionsDiv = quizBox.querySelector(".quiz-options");
+    const result = quizBox.querySelector(".quiz-result");
+    const nextBtn = quizBox.querySelector("#nextQuizBtn");
+
+    q.cards.forEach((cardName) => {
+        const cardData = quizCards.find(card => card.cardName === cardName);
+
+        if (!cardData) {
+            console.warn("Quiz card not found:", cardName);
+            return;
+        }
+
+        const wrap = document.createElement("div");
+        wrap.className = "quiz-card-wrap";
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const img = document.createElement("img");
+        img.src = cardData.imgsrc;
+        img.alt = cardData.cardName;
+
+        const order = document.createElement("div");
+        order.className = "card-order";
+
+
+        card.appendChild(img);
+        wrap.appendChild(card);
+        wrap.appendChild(order);
+        cardRow.appendChild(wrap);
+    });
+    q.options.forEach(option => {
+        const btn = document.createElement("button");
+        btn.textContent = option;
+
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".quiz-options button").forEach(button => {
+                button.disabled = true;
+            });
+
+            if (option === q.answer) {
+                result.textContent = "Correct! " + q.explanation;
+                result.className = "quiz-result correct";
+            } else {
+                result.textContent = "Wrong! Answer: " + q.explanation;
+                result.className = "quiz-result wrong";
+            }
+
+            nextBtn.disabled = false;
+        });
+
+        optionsDiv.appendChild(btn);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentQuestion++;
+
+        if (currentQuestion >= quizQuestions.length) {
+            quizContainer.innerHTML = `
+                <div class="quiz-box">
+                    <h3>Quiz Complete!</h3>
+                    <button id="restartQuizBtn">Restart Quiz</button>
+                </div>
+            `;
+
+            document.getElementById("restartQuizBtn").addEventListener("click", () => {
+                currentQuestion = 0;
+                showQuestion();
+            });
+
+            return;
+        }
+
+        showQuestion();
+    });
+
+    quizContainer.appendChild(quizBox);
+}

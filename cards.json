@@ -2,42 +2,42 @@
     {
         "cardName": "PotatoKing1",
         "description": "Acquire all 7 Potato Kings to win!",
-        "imgsrc": "/assets/cards/PotatoKing1.png"
+        "imgsrc": "assets/cards/PotatoKing1.png"
     },
     {
         "cardName": "PotatoKing2",
         "description": "Acquire all 7 Potato Kings to win!",
-        "imgsrc": "/assets/cards/PotatoKing2.png"
+        "imgsrc": "assets/cards/PotatoKing2.png"
     },
     {
         "cardName": "PotatoKing3",
         "description": "Acquire all 7 Potato Kings to win!",
-        "imgsrc": "/assets/cards/PotatoKing3.png"
+        "imgsrc": "assets/cards/PotatoKing3.png"
     },
     {
         "cardName": "PotatoKing4",
         "description": "Acquire all 7 Potato Kings to win!",
-        "imgsrc": "/assets/cards/PotatoKing4.png"
+        "imgsrc": "assets/cards/PotatoKing4.png"
     },
     {
         "cardName": "PotatoKing5",
         "description": "Acquire all 7 Potato Kings to win!",
-        "imgsrc": "/assets/cards/PotatoKing5.png"
+        "imgsrc": "assets/cards/PotatoKing5.png"
     },
     {
         "cardName": "PotatoKing6",
         "description": "Acquire all 7 Potato Kings to win!",
-        "imgsrc": "/assets/cards/PotatoKing6.png"
+        "imgsrc": "assets/cards/PotatoKing6.png"
     },
     {
         "cardName": "PotatoKing7",
         "description": "Acquire all 7 Potato Kings to win!",
-        "imgsrc": "/assets/cards/PotatoKing7.png"
+        "imgsrc": "assets/cards/PotatoKing7.png"
     },
     {
         "cardName": "Roast",
         "description": "Roast 1 Potato, assign a value to a variable",
-        "imgsrc": "/assets/cards/Roast.png",
+        "imgsrc": "assets/cards/Roast.png",
         "javaScript": "let roast = 1;",
         "python": "roast = 1",
         "csharp": "int roast = 1;"
@@ -45,7 +45,7 @@
     {
         "cardName": "Mash",
         "description": "Mash 2 Potato, assign a value to a variable",
-        "imgsrc": "/assets/cards/Mash.png",
+        "imgsrc": "assets/cards/Mash.png",
         "javaScript": "let mash = 2;",
         "python": "mash = 2",
         "csharp": "int mash = 2;"
@@ -53,7 +53,7 @@
     {
         "cardName": "Fry",
         "description": "Fry 3 Potato, assign a value to a variable",
-        "imgsrc": "/assets/cards/Fry.png",
+        "imgsrc": "assets/cards/Fry.png",
         "javaScript": "let fry = 3;",
         "python": "fry = 3",
         "csharp": "int fry = 3;"
@@ -61,7 +61,7 @@
     {
         "cardName": "While > 6",
         "description": "While target ship has more than 6 potatoes",
-        "imgsrc": "/assets/cards/While_6.png",
+        "imgsrc": "assets/cards/While_6.png",
         "javaScript": "while (targetShip.potatoes > 6) { /* action */ }",
         "python": "while targetShip.potatoes > 6:\n    pass",
         "csharp": "while (targetShip.Potatoes > 6) { }"
@@ -69,7 +69,7 @@
     {
         "cardName": "While > 5",
         "description": "While target ship has more than 5 potatoes",
-        "imgsrc": "/assets/cards/While_5.png",
+        "imgsrc": "assets/cards/While_5.png",
         "javaScript": "while (targetShip.potatoes > 5) { /* action */ }",
         "python": "while targetShip.potatoes > 5:\n    pass",
         "csharp": "while (targetShip.Potatoes > 5) { }"
@@ -77,7 +77,7 @@
     {
         "cardName": "While > 4",
         "description": "While target ship has more than 4 potatoes",
-        "imgsrc": "/assets/cards/While_4.png",
+        "imgsrc": "assets/cards/While_4.png",
         "javaScript": "while (targetShip.potatoes > 4) { /* action */ }",
         "python": "while targetShip.potatoes > 4:\n    pass",
         "csharp": "while (targetShip.Potatoes > 4) { }"
@@ -85,7 +85,7 @@
     {
         "cardName": "For x times",
         "description": "x = number of cards in enemy hand",
-        "imgsrc": "/assets/cards/For_x_Times.png",
+        "imgsrc": "assets/cards/For_x_Times.png",
         "javaScript": "for (let i = 0; i < enemyHand.length; i++) { /* action */ }",
         "python": "for i in range(len(enemyHand)):\n    pass",
         "csharp": "for (int i = 0; i < enemyHand.Count; i++) { }"
@@ -93,7 +93,7 @@
     {
         "cardName": "For y times",
         "description": "y = number of ships you own",
-        "imgsrc": "/assets/cards/For_y_Times.png",
+        "imgsrc": "assets/cards/For_y_Times.png",
         "javaScript": "for (let i = 0; i < yourShips.length; i++) { /* action */ }",
         "python": "for i in range(len(yourShips)):\n    pass",
         "csharp": "for (int i = 0; i < yourShips.Count; i++) { }"
@@ -101,7 +101,7 @@
     {
         "cardName": "For 2 times",
         "description": "Repeat 2 times",
-        "imgsrc": "/assets/cards/For_2_Times.png",
+        "imgsrc": "assets/cards/For_2_Times.png",
         "javaScript": "for (let i = 0; i < 2; i++) { /* action */ }",
         "python": "for i in range(2):\n    pass",
         "csharp": "for (int i = 0; i < 2; i++) { }"
@@ -109,7 +109,7 @@
     {
         "cardName": "For 3 times",
         "description": "Repeat 3 times",
-        "imgsrc": "/assets/cards/For_3_Times.png",
+        "imgsrc": "assets/cards/For_3_Times.png",
         "javaScript": "for (let i = 0; i < 3; i++) { /* action */ }",
         "python": "for i in range(3):\n    pass",
         "csharp": "for (int i = 0; i < 3; i++) { }"
@@ -117,7 +117,7 @@
     {
         "cardName": "If <=5 Else",
         "description": "If potato count is 5 or less",
-        "imgsrc": "/assets/cards/If_=5_Else.png",
+        "imgsrc": "assets/cards/If_=5_Else.png",
         "javaScript": "if (allShips.potatoes <= 5) { /* action */ } else { /* action */ }",
         "python": "if allShips.potatoes <= 5:\n    pass\nelse:\n    pass",
         "csharp": "if (allShips.Potatoes <= 5) { } else { }"
@@ -125,7 +125,7 @@
     {
         "cardName": "If <=4 Else",
         "description": "If potato count is 4 or less",
-        "imgsrc": "/assets/cards/If_=4_Else.png",
+        "imgsrc": "assets/cards/If_=4_Else.png",
         "javaScript": "if (allShips.potatoes <= 4) { /* action */ } else { /* action */ }",
         "python": "if allShips.potatoes <= 4:\n    pass\nelse:\n    pass",
         "csharp": "if (allShips.Potatoes <= 4) { } else { }"
@@ -133,47 +133,47 @@
     {
         "cardName": "If <=3 Else",
         "description": "If potato count is 3 or less",
-        "imgsrc": "/assets/cards/If_=3_Else.png",
+        "imgsrc": "assets/cards/If_=3_Else.png",
         "javaScript": "if (allShips.potatoes <= 3) { /* action */ } else { /* action */ }",
         "python": "if allShips.potatoes <= 3:\n    pass\nelse:\n    pass",
         "csharp": "if (allShips.Potatoes <= 3) { } else { }"
     },
     {
         "cardName": "Hack",
-        "imgsrc": "/assets/cards/Hack.png",
+        "imgsrc": "assets/cards/Hack.png",
         "javaScript": "hack(targetShip);",
         "python": "hack(targetShip)",
         "csharp": "Hack(targetShip);"
     },
     {
         "cardName": "Hijack",
-        "imgsrc": "/assets/cards/Hijack.png",
+        "imgsrc": "assets/cards/Hijack.png",
         "javaScript": "hijack(enemyShip);",
         "python": "hijack(enemyShip)",
         "csharp": "Hijack(enemyShip);"
     },
     {
         "cardName": "Loot",
-        "imgsrc": "/assets/cards/Loot.png",
+        "imgsrc": "assets/cards/Loot.png",
         "javaScript": "loot(enemyPlayer);",
         "python": "loot(enemyPlayer)",
         "csharp": "Loot(enemyPlayer);"
     },
     {
         "cardName": "Deny",
-        "imgsrc": "/assets/cards/Deny.png",
+        "imgsrc": "assets/cards/Deny.png",
         "javaScript": "deny();",
         "python": "deny()",
         "csharp": "Deny();"
     },
     {
         "cardName": "The Frying Dutchpan",
-        "imgsrc": "/assets/cards/FryingDutchpan.png",
+        "imgsrc": "assets/cards/FryingDutchpan.png",
         "description": "A reference to the Flying Dutchman, a legendary ghost ship. The card's name is a pun that combines 'frying pan' with 'Flying Dutchman'. "
     },
     {
         "cardName": "The S.S Megachip",
-        "imgsrc": "/assets/cards/SSMegachip.png",
+        "imgsrc": "assets/cards/SSMegachip.png",
         "description": "The S.S. Megachip acts as a powerful upgrade that lets you stack up to 5 action or control cards underneath it"
     }
 ]

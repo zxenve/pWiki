@@ -1,0 +1,81 @@
+[
+    {
+        "index": 0,
+        "question": "What is the result of the following cards?",
+        "options": [
+            "a. 4 potatoes",
+            "b. 2 potatoes",
+            "c. 3 potatoes",
+            "d. 1 potatoes"
+        ],
+        "answer": "a. 4 potatoes",
+        "cards": [
+            "For 2 times",
+            "Mash"
+        ],
+        "explanation": "2(Mash) = 2 * 2 = 4 potatoes."
+    },
+    {
+        "index": 1,
+        "question": "What is the result of the following cards? You have 2 ships, enemy have 4 cards.",
+        "options": [
+            "a. 12 potatoes",
+            "b. 4 potatoes",
+            "c. 8 potatoes",
+            "d. 16 potatoes"
+        ],
+        "answer": "d. 16 potatoes",
+        "cards": [
+            "For y times",
+            "For x times",
+            "Mash"
+        ],
+        "explanation": "Y * X * 2 = 2 * 4 * 2 = 16 potatoes."
+    },
+    {
+        "index": 2,
+        "question": "Which is smatter to choose ? Player 1 and 2 has 20 potatoes. Player 3 has 4 potatoes. Player 4 has 4 potatoes too. Player 5 has 15 potatoes.",
+        "options": [
+            "a. If",
+            "b. Else"
+        ],
+        "answer": "b. Else",
+        "cards": [
+            "If <=4 Else"
+        ],
+        "explanation": "There are more players with more than 4 potatoes."
+    },
+    {
+        "index": 3,
+        "question": "What is the result of these cards? Enemy has 4 cards, 6 potatoes.",
+        "options": [
+            "a. 0 potatoes",
+            "b. 3 potatoes",
+            "c. 12 potatoes",
+            "d. 18 potatoes"
+        ],
+        "answer": "a. 0 potatoes",
+        "cards": [
+            "While > 6",
+            "For x times",
+            "Fry"
+        ],
+        "explanation": "Enemy has 6 potatoes, which is not more than 6. So the while loop will not execute, resulting in 0 potatoes."
+    },
+    {
+        "index": 4,
+        "question": "Which is smatter to choose? Player 1 and 2 has 15 potatoes. Player 3 has 4 potatoes. Player 4 has 5 potatoes too. Player 5 has 15 potatoes.",
+        "options": [
+            "a. Use only if else(else)",
+            "b. Use only While",
+            "c. Use only if else (if)",
+            "d. Use IfElse(else) then While"
+        ],
+        "answer": "a. Use only if else(else)",
+        "cards": [
+            "If <=4 Else",
+            "While > 5"
+        ],
+        "explanation": "There are more players with more than 5 potatoes. Using both the control cards is redundant."
+    }
+]
