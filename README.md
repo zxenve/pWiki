@@ -40,6 +40,7 @@ View code examples for each card in:
 - 📱 **Responsive Design** - Works on desktop and mobile devices
 - 🚀 **Fast & Lightweight** - Pure vanilla JavaScript, no frameworks
 - 🎯 **Easy Navigation** - Smooth scrolling with scroll-to-top button
+- 📝 **Interactive Quiz** - Test your knowledge of card combinations and game mechanics
 
 ---
 
@@ -60,6 +61,7 @@ pWiki/
 ├── main.css            # Styling and animations
 ├── main.js             # Interactive card functionality
 ├── cards.json          # Card data (names, descriptions, code examples)
+├── quiz.json           # Quiz questions and answers
 ├── assets/             # Images and card artwork
 │   └── cards/          # Card images
 │   └── imgs/           # Logo and other images
@@ -83,6 +85,15 @@ pWiki/
 2. **Card Loading** - Cards are dynamically loaded from `cards.json`
 3. **Interactive Overlays** - Click a card to see its description and code examples
 4. **Language Tabs** - Switch between JavaScript, Python, and C# implementations
+5. **Quiz System** - Test your understanding with interactive quiz questions about card combinations and game strategies
+
+### 🎓 Quiz Features
+
+The integrated quiz system includes:
+- **Multiple-choice questions** - Test your knowledge of card mechanics
+- **Instant feedback** - See explanations for correct and incorrect answers
+- **Card visualization** - Questions show the actual cards involved
+- **Progressive difficulty** - Questions range from basic combinations to complex scenarios
 
 ---
 
@@ -93,6 +104,8 @@ This wiki helps learners:
 - See how the same logic is expressed in different languages
 - Understand variable assignment, loops, conditionals, and functions
 - Learn in a fun, game-based context
+- **Test their knowledge** with interactive quizzes about card combinations
+- **Practice strategic thinking** by analyzing card combinations and outcomes
 
 ---
 
