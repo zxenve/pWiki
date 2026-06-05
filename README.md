@@ -49,7 +49,8 @@ View code examples for each card in:
 1. **Visit the Github Pages**
 
    link:  https://zxenve.github.io/pWiki/
-
+   
+   figma : [https://www.figma.com/design/](https://www.figma.com/design/MCt97QL0JHTbwVylM8wJ58/pWiki?node-id=0-1&t=RPUKa936c8ydMTFp-1)
 ---
 
 
