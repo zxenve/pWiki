@@ -198,7 +198,7 @@ const categories = {
         "If <=3 Else", "If <=4 Else", "If <=5 Else",
         "While > 4", "While > 5", "While > 6"
     ],
-    "Surprise Cards": ["Deny", "Loot", "Hack", "Hijack"],
+    "Surprise Cards": ["Deny", "Loot", "Hack", "Hijack", "Switch"],
     "Potato King Cards": [
         "PotatoKing1", "PotatoKing2", "PotatoKing3", "PotatoKing4",
         "PotatoKing5", "PotatoKing6", "PotatoKing7"
@@ -362,6 +362,7 @@ const quizContainer = document.getElementById("quizContainer");
 let quizQuestions = [];
 let quizCards = [];
 let currentQuestion = 0;
+let quizScore = 0;
 
 Promise.all([
     fetch("quiz.json").then(res => res.json()),
@@ -402,6 +403,7 @@ function showQuestion() {
     const result = quizBox.querySelector(".quiz-result");
     const nextBtn = quizBox.querySelector("#nextQuizBtn");
 
+
     q.cards.forEach((cardName) => {
         const cardData = quizCards.find(card => card.cardName === cardName);
 
@@ -429,6 +431,7 @@ function showQuestion() {
         wrap.appendChild(order);
         cardRow.appendChild(wrap);
     });
+
     q.options.forEach(option => {
         const btn = document.createElement("button");
         btn.textContent = option;
@@ -439,10 +442,11 @@ function showQuestion() {
             });
 
             if (option === q.answer) {
-                result.textContent = "Correct! " + q.explanation;
+                quizScore++;
+                result.textContent = "✅ Correct! " + q.explanation;
                 result.className = "quiz-result correct";
             } else {
-                result.textContent = "Wrong! Answer: " + q.explanation;
+                result.textContent = "❌ Wrong! Answer: " + q.explanation;
                 result.className = "quiz-result wrong";
             }
 
@@ -456,15 +460,22 @@ function showQuestion() {
         currentQuestion++;
 
         if (currentQuestion >= quizQuestions.length) {
+            const prizeImage = giveResultImg(quizScore);
+            const resultText = giveResultText(quizScore);
+
             quizContainer.innerHTML = `
                 <div class="quiz-box">
                     <h3>Quiz Complete!</h3>
+                    <h3>Your score: ${quizScore} / ${quizQuestions.length}</h3>
+                    <img src="${prizeImage}" alt="Prize" class="prize-image">
+                    <h3>${resultText}</h3>
                     <button id="restartQuizBtn">Restart Quiz</button>
                 </div>
             `;
 
             document.getElementById("restartQuizBtn").addEventListener("click", () => {
                 currentQuestion = 0;
+                quizScore = 0;
                 showQuestion();
             });
 
@@ -475,4 +486,28 @@ function showQuestion() {
     });
 
     quizContainer.appendChild(quizBox);
+}
+
+function giveResultImg(quizScore) {
+    if (quizScore <= 2) {
+        return "assets/imgs/PrizeA.png";
+    }
+    else if (quizScore <= 4) {
+        return "assets/imgs/PrizeB.png";
+    }
+    else {
+        return "assets/imgs/PrizeC.png";
+    }
+}
+
+function giveResultText(quizScore) {
+    if (quizScore <= 2) {
+        return "A soggy shoe. You suck! Try again!";
+    }
+    else if (quizScore <= 4) {
+        return "Here's a treasure map, maybe with this you can find your way to try again!";
+    }
+    else {
+        return "You got the Treasure Chest! You are a Potato Pirate King! Now hide it at laugh-tale!";
+    }
 }

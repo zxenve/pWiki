@@ -208,6 +208,10 @@ body {
     gap: 4rem;
 }
 
+#closeOverlay {
+    transform: rotate(65deg);
+}
+
 /* =========================
    Sand SECTION
 ========================= */
@@ -330,15 +334,17 @@ body {
    CARD ROWS
 ========================= */
 .cardRow {
-    width: 100%;
+    width: 96%;
+    box-sizing: border-box;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 
+    padding: 2%;
     gap: 2%;
-
+    padding-inline: 5%;
     margin-bottom: 2%;
 }
 

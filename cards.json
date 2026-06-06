@@ -140,14 +140,16 @@
     },
     {
         "cardName": "Hack",
+        "description": "A function that send any ship to 'Battle' and you decide the target",
         "imgsrc": "assets/cards/Hack.png",
-        "javaScript": "hack(targetShip);",
-        "python": "hack(targetShip)",
-        "csharp": "Hack(targetShip);"
+        "javaScript": "hack(targetShip,victimShip);",
+        "python": "hack(targetShip, victimShip)",
+        "csharp": "Hack(targetShip, victimShip);"
     },
     {
         "cardName": "Hijack",
         "imgsrc": "assets/cards/Hijack.png",
+        "description": "A funtion that steals an enemy ship and all the cards on it.",
         "javaScript": "hijack(enemyShip);",
         "python": "hijack(enemyShip)",
         "csharp": "Hijack(enemyShip);"
@@ -155,16 +157,26 @@
     {
         "cardName": "Loot",
         "imgsrc": "assets/cards/Loot.png",
+        "description": "A function that steals 2 cards from an enemy hand.",
         "javaScript": "loot(enemyPlayer);",
         "python": "loot(enemyPlayer)",
         "csharp": "Loot(enemyPlayer);"
     },
     {
         "cardName": "Deny",
+        "description": "A function that blocks all attacks and surprises",
         "imgsrc": "assets/cards/Deny.png",
         "javaScript": "deny();",
         "python": "deny()",
         "csharp": "Deny();"
+    },
+    {
+        "cardName": "Switch",
+        "description": "A function that gives you prize by how many ships you own.",
+        "imgsrc": "assets/cards/Switch.png",
+        "javaScript": "switch(yourShips)",
+        "python": "switch(yourShips)",
+        "csharp": "Switch(yourShips);"
     },
     {
         "cardName": "The Frying Dutchpan",
